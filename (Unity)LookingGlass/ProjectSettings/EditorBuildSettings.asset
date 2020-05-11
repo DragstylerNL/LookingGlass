@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Depthkit/Examples/Scenes/Depthkit_Example.unity
+    guid: 52890ebc8fac3f445b65a618f3987535
   m_configObjects: {}
