@@ -122,6 +122,8 @@ GameObject:
   - component: {fileID: 9061538868148026040}
   - component: {fileID: 9061538868148026041}
   - component: {fileID: 9061538868148025991}
+  - component: {fileID: 405027407}
+  - component: {fileID: 405027411}
   m_Layer: 0
   m_Name: Vendora
   m_TagString: Untagged
@@ -138,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 9061538868148026042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.251, y: -3.364, z: 0.3427}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.175, y: 0.010000001, z: 0.175}
   m_Children:
   - {fileID: 1218475888492596991}
   m_Father: {fileID: 0}
@@ -236,7 +238,22 @@ MonoBehaviour:
   _noContactLayer:
     layerIndex: 0
   _eventTable:
-    _entries: []
+    _entries:
+    - enumValue: 141
+      callback:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 405027411}
+            m_MethodName: SetWorld
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
 --- !u!65 &9061538868148025991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -250,3 +267,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 6, z: 1.0000001}
   m_Center: {x: 0.00000005960464, y: 1, z: -0.00000008940696}
+--- !u!114 &405027407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061538868148026042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cc010f010809141b6c417049f1e916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform: {fileID: 0}
+--- !u!114 &405027411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061538868148026042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5db599641feaae4bbffa291c934178d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color:
+    serializedVersion: 2
+    rgba: 4279796115
+  floor: {fileID: 0}
+  name: Vendora

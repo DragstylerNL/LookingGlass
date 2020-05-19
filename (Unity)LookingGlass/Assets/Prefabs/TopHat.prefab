@@ -121,7 +121,9 @@ GameObject:
   - component: {fileID: 664514422694482809}
   - component: {fileID: 5824065154873864926}
   - component: {fileID: 2915697082890510265}
-  - component: {fileID: 5417253767904150112}
+  - component: {fileID: 1775489224}
+  - component: {fileID: 1775489220}
+  - component: {fileID: 6924232535515972588}
   m_Layer: 0
   m_Name: TopHat
   m_TagString: Untagged
@@ -138,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 5258952012280530168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.207, y: -3.364, z: 0.3427}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.175, y: 0.010000001, z: 0.175}
   m_Children:
   - {fileID: 286344645190913837}
   m_Father: {fileID: 0}
@@ -236,8 +238,23 @@ MonoBehaviour:
   _noContactLayer:
     layerIndex: 0
   _eventTable:
-    _entries: []
---- !u!65 &5417253767904150112
+    _entries:
+    - enumValue: 141
+      callback:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 6924232535515972588}
+            m_MethodName: SetWorld
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+--- !u!65 &1775489224
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,5 +265,35 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 11.74, z: 1.0000001}
-  m_Center: {x: 0.00000005960464, y: 4.42, z: -0.00000008940696}
+  m_Size: {x: 1, y: 2, z: 1.0000001}
+  m_Center: {x: 0, y: -0.11, z: 0}
+--- !u!114 &1775489220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258952012280530168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cc010f010809141b6c417049f1e916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform: {fileID: 0}
+--- !u!114 &6924232535515972588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258952012280530168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5db599641feaae4bbffa291c934178d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color:
+    serializedVersion: 2
+    rgba: 4284500037
+  floor: {fileID: 0}
+  name: TopHat
