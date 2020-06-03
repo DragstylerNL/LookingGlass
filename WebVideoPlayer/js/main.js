@@ -23,6 +23,7 @@ $btn.on('click', function(){
 
 video.onended = function() {
     clearInterval(update);
+    treshold1 = treshold2 = treshold3 = treshold4 = false;
 };
 
 function Update(){
