@@ -11,6 +11,12 @@ public class HatScene : MonoBehaviour
     [SerializeField] private Transform wantedHatPos;
     public string name;
     private bool _onit = false;
+    private Rigidbody _rigidbody;
+
+    void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -19,6 +25,7 @@ public class HatScene : MonoBehaviour
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 10f))
         {
             floor.GetComponent<MeshRenderer>().material.color = Color.white;
+            _rigidbody.constraints = RigidbodyConstraints.None;
             _onit = false;
         }
         else
@@ -28,6 +35,7 @@ public class HatScene : MonoBehaviour
                 if (!hit.collider.CompareTag("Character"))
                 {
                     floor.GetComponent<MeshRenderer>().material.color = Color.white;
+                    _rigidbody.constraints = RigidbodyConstraints.None;
                     _onit = false;
                 }
             }
@@ -44,6 +52,7 @@ public class HatScene : MonoBehaviour
             {
                 floor.GetComponent<MeshRenderer>().material.color = color;
                 _onit = true;
+                _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }
@@ -62,6 +71,14 @@ public class HatScene : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("Hand"))
+        {
+            _rigidbody.constraints = RigidbodyConstraints.None;
         }
     }
 }
