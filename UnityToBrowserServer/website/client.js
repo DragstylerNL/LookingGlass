@@ -2,8 +2,7 @@
 var video = $("#video").get(0);
 
 // browser speech 
-var socket = io('ws://localhost:52300');        //new io.Socket();
-//socket.connect('http://localhost:52300');
+var socket = io('ws://localhost:52300');
 
 socket.on('connect', () => {
   let platform = 'browser';
@@ -11,5 +10,10 @@ socket.on('connect', () => {
 });
 
 socket.on('areaUpdate', data => {
-    console.log(data);
-  });
+  console.log(data.area);
+  switch (data.area){
+    case 'zoo': video.src = "zoo.mp4"; break;
+    case 'robot': video.src = "robot.mp4"; break;
+  } 
+  video.play();
+});
