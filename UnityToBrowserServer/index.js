@@ -11,13 +11,13 @@ io.on('connection', function(socket) {
         switch (data.platform){
             case 'Unity': LookingGlassSocket = socket;
             break;
-            case 'Browser': BrowserSocket = socket;
+            case 'browser': BrowserSocket = socket;
         }
     });
 
     socket.on('areaUpdate', function(data){
-        //BrowserSocket.emit('areaUpdate', {area: data.area})
-        console.log('fuck');
-    })
+        console.log('kkk');
+        BrowserSocket.emit('areaUpdate', {area: data.area});
+    });
 
-})
+});
