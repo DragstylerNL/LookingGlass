@@ -7,6 +7,8 @@ public class ObjectScene : MonoBehaviour
     [SerializeField] private GameObject floor;
     [SerializeField] private Transform wantedObjectPos;
     [SerializeField] private float closeEnoughDistance = 0.125f;
+    [SerializeField] private string areaName;
+    [SerializeField] private NetworkClient networkClient;
     private bool _onit = false;
     private bool grabbed = false;
     private Rigidbody _rigidbody;
@@ -51,6 +53,7 @@ public class ObjectScene : MonoBehaviour
             floor.GetComponent<MeshRenderer>().material.color = color;
             _sceneActive.Invoke();
             _onit = true;
+            networkClient.SendUpdate(areaName);
             _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             allowed = false;
             currentTime = 0;
