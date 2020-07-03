@@ -17,6 +17,9 @@ public class ZoneOutChecker : MonoBehaviour
 
     private void Reset()
     {
+        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
         gameObject.transform.position = transform.position;
         gameObject.transform.rotation = transform.rotation;
     }
