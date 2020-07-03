@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/BigBrainTime.unity
+    guid: f26b28667b70c9646b9372736e6234f9
   m_configObjects: {}
