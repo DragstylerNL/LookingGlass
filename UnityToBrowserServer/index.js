@@ -16,7 +16,6 @@ io.on('connection', function(socket) {
     });
 
     socket.on('areaUpdate', function(data){
-        console.log('kkk');
         BrowserSocket.emit('areaUpdate', {area: data.area});
     });
 
