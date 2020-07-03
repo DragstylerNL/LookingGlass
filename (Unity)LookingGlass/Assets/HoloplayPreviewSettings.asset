@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HoloplayPreviewSettings
   m_EditorClassIdentifier: 
   manualPosition: 1
-  position: {x: 0, y: 0}
+  position: {x: -2100, y: 0}
